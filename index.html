@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <h2>All forecasts and weather content are retrieved from <a href="https://openweathermap.org/">OpenWeatherMap</a> </h2>
+    <div class="card">
+      <div class="search">
+        <input id='cityName'
+          type="text"
+          placeholder="Enter City Name 
+            "
+          spellcheck="false"
+        />
+        <button><img src="images/search.png" alt="" id="check" /></button>
+      </div>
+      <div class="weather">
+        <img src="images/rain.png" alt="Image" class="weather-icon">
+        <h1 class="temp">22<sup>o</sup>c</h1>
+        <h2 class="city">Glasgow</h2>
+      </div>
+      <div class="details">
+        <div class="humidity col">
+            <img src="images/humidity.png" alt="Image">
+            <div>
+                <p class="humidity" id="humidity">
+                    50%
+                </p>
+                <p>Humidity</p>
+            </div>
+        </div>
+        <div class="wind col">
+            <img src="images/wind.png" alt="Image">
+            <div>
+                <p class="wind" id="wind">
+                    15 Km/h
+                </p>
+                <p>Wind Speed</p>
+            </div>
+        </div>
+      </div>
+    </div>
+        <footer>
+      <p>&copy; <span id="year"></span></p>
+      <p>
+        Powered by
+        <a target="_blank" href="https://github.com/Bassam-Radwan">Bassam</a>
+      </p>
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>
