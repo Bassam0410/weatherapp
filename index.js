@@ -14,14 +14,14 @@ const apiKey = '2f8cb4eca6e3afdbaf2c333a3eb090aa';
 const apiUrl = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=`;
 
 async function checkWeather(place) {
-    const response = await fetch(apiUrl +place+`&appid=${apiKey}`);
+    const response = await fetch(apiUrl + place + `&appid=${apiKey}`);
     let data = await response.json()
     city.innerHTML = data.name
     temp.innerHTML = Math.round(data.main.temp) + "°c   "
     wind.innerHTML = data.wind.speed + "Km"
     humidity.innerHTML = `${data.main.humidity}%`
-    image.src = "images/"+(data.weather[0].main).lower+".png"
-    
+    image.src = "images/" + (data.weather[0].main).tolowerCase() + ".png"
+
 }
 check.addEventListener('click', () => {
     checkWeather(cityName.value)
@@ -30,5 +30,5 @@ cityName.addEventListener('keypress', (evt) => {
     if (evt.key == 'Enter') {
         checkWeather(cityName.value)
     };
-    
+
 })
