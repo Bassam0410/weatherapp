@@ -20,7 +20,7 @@ async function checkWeather(place) {
     temp.innerHTML = Math.round(data.main.temp) + "°c   "
     wind.innerHTML = data.wind.speed + "Km"
     humidity.innerHTML = `${data.main.humidity}%`
-    image.src = "images/" + (data.weather[0].main).tolowerCase() + ".png"
+    image.src = "images/" + (data.weather[0].main).toLowerCase() + ".png"
 
 }
 check.addEventListener('click', () => {
